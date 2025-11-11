@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Energy Hive Feedback Form</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #c6f7ff, #e9ffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    margin: 0;
+  }
+  h1 {
+    color: #0077cc;
+    margin-bottom: 10px;
+  }
+  form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  input, textarea, select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  textarea { resize: vertical; min-height: 80px; }
+  .radio-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  button {
+    margin-top: 15px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover { background-color: #005fa3; }
+</style>
+</head>
+<body>
+  <h1>Energy Hive Feedback</h1>
+  <form action="https://formspree.io/f/xldaelvl" method="POST">
+    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label>How did you hear about Energy Hive?</label>
+    <select name="Source" required>
+      <option value="">-- Select --</option>
+      <option>School/Exhibition</option>
+      <option>Social Media</option>
+      <option>Friends</option>
+      <option>ATL Event</option>
+      <option>Other</option>
+    </select>
+
+    <label>1️⃣ How useful do you find Energy Hive?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="Usefulness" value="Excellent" required> Excellent</label>
+      <label><input type="radio" name="Usefulness" value="Good"> Good</label>
+      <label><input type="radio" name="Usefulness" value="Average"> Average</label>
+      <label><input type="radio" name="Usefulness" value="Needs Improvement"> Needs Improvement</label>
+    </div>
+
+    <label>2️⃣ Which feature do you like the most?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="Favorite_Feature" value="Solar Charging"> Solar Charging</label>
+      <label><input type="radio" name="Favorite_Feature" value="Mini Refrigeration"> Mini Refrigeration</label>
+      <label><input type="radio" name="Favorite_Feature" value="Smart Display"> Smart Display</label>
+      <label><input type="radio" name="Favorite_Feature" value="Pay-Per-Use System"> Pay-Per-Use System</label>
+    </div>
+
+    <label>3️⃣ What can we improve?</label>
+    <textarea name="Improvements" placeholder="Write your suggestions here..."></textarea>
+
+    <label>4️⃣ Rate the design and innovation (1-5):</label>
+    <select name="Rating" required>
+      <option value="">-- Select Rating --</option>
+      <option>5 - Outstanding</option>
+      <option>4 - Very Good</option>
+      <option>3 - Good</option>
+      <option>2 - Fair</option>
+      <option>1 - Poor</option>
+    </select>
+
+    <label>Additional Comments (optional):</label>
+    <textarea name="Comments" placeholder="Any extra thoughts..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</body>
+</html>
